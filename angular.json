@@ -25,7 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@nebular/theme/styles/prebuilt/cosmic.css",
+              "src/styles.css",
+              "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.base.css"
             ],
             "scripts": []
           },
@@ -94,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5f7121ce-5d28-489a-84ec-8d0a54914cf2"
   }
 }

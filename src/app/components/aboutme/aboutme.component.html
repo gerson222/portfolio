@@ -1,0 +1,8 @@
+<header class="py-5 bg-image-full">
+   <div class="text-center my-5" *ngFor="let item of aboutMeData">
+      <img class="img-fluid rounded-circle mb-4" [src]="item.imageUrl" [alt]="item.title" />
+      <h1 class="text-black fs-3 fw-bolder">{{ item.title }}</h1>
+      <p class="text-black-50 mb-0">{{ item.description }}</p>
+    </div>
+</header>
+ 
