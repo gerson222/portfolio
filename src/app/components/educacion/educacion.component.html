@@ -1,22 +1,25 @@
-<div class="py-5">
-   <div class="row">
-     <div class="card my-5">
-       <div class="container">
-         <div class="card-header text-center">
-           <h2>Educacion</h2>
+<div class="container py-5">
+  <mat-card class="my-5 custom-card">
+    <mat-card-header>
+      <mat-card-title class="text-center">
+        <h2>Educacion</h2>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="custom-content">
+      <div class="row my-5" *ngFor="let educacion of educaciones">
+        <div class="col-lg-2">
+          <img class="img-fluid rounded-circle" [src]="educacion.imagen" alt="logo" />
+        </div>
+        <div class="col-lg-8">
+          <h4>{{ educacion.titulo }}</h4>
+          <div class="d-flex">
+            <p class="lead mr-3">{{ educacion.institucion }}</p>
+            <p class="lead mr-3">{{ educacion.inicio }}</p>
+            <p class="lead">{{ educacion.fin }}</p>
          </div>
-         <div class="row my-5" *ngFor="let educacion of educaciones">
-           <div class="col-lg-2">
-             <img class="img-fluid rounded-circle mb-4" [src]="educacion.imagen" alt="logo" />
-           </div>
-           <div class="col-lg-8">
-             <h4>{{ educacion.titulo }}</h4>
-             <p class="lead">{{ educacion.descripcion }}</p>
-             <p class="mb-0">{{ educacion.contenido }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
- 
+         <p class="mb-0">{{ educacion.descripcion }}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

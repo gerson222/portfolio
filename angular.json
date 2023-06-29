@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "./node_modules/@nebular/theme/styles/prebuilt/cosmic.css",
               "src/styles.css",
               "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.base.css"

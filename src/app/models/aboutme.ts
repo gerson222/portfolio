@@ -6,7 +6,7 @@ export interface AboutMe {
 
 export const aboutMeData: AboutMe[] = [
   {
-    imageUrl: 'https://example.com/image1.jpg',
+    imageUrl: '../../../assets/img/pato-con-cuchillo.jpg',
     title: 'Perfil 1',
     description: 'Descripción del perfil 1',
   },

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatButtonModule} from '@angular/material/button'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -42,7 +45,10 @@ import { SkillsComponent } from './components/skills/skills.component';
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'cosmic' }),
     NbLayoutModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

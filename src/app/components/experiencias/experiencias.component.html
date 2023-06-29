@@ -1,1 +1,25 @@
-<p>experiencias works!</p>
+<div class="container py-5">
+   <mat-card class="my-5 custom-card">
+      <mat-card-header>
+         <mat-card-title class="text-center">
+            <h2>Experiencia</h2>
+         </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="custom-content">
+         <div class="row my-5" *ngFor="let experiencia of experiencias">
+            <div class="col-lg-2">
+               <img class="img-fluid rounded-circle" [src]="experiencia.imagen" alt="logo" />
+            </div>
+            <div class="col-lg-8">
+               <h4>{{ experiencia.puesto }}</h4>
+               <div class="d-flex">
+                  <p class="lead">{{ experiencia.empresa }}</p>
+                  <p class="lead">{{ experiencia.inicio }}</p>
+                  <p class="lead">{{ experiencia.fin }}</p>
+               </div>
+               <p class="mb-0">{{ experiencia.descripcion }}</p>
+            </div>
+         </div>
+      </mat-card-content>
+   </mat-card>
+</div>

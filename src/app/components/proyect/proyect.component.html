@@ -1,1 +1,18 @@
-<p>proyect works!</p>
+<div class="container py-5">
+   <mat-card class="my-5 custom-card">
+      <mat-card-header>
+         <mat-card-title class="text-center">
+            <h2>Proyectos</h2>
+         </mat-card-title>
+      </mat-card-header>
+      <div *ngFor="let project of projects">
+         <mat-card-content class="custom-content">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.content }}</p>
+         </mat-card-content>
+         <mat-card-actions>
+            <button mat-raised-button color="primary" [routerLink]="project.buttonUrl" role="button">Enlace a Github</button>
+         </mat-card-actions>
+      </div>
+   </mat-card>
+</div>
