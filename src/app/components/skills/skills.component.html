@@ -1,11 +1,18 @@
-<div class="container py-5 my-5 row">
-   <mat-card class="example-card" *ngFor="let skill of skillsData">
-      <mat-card-content>
-      <h2 class="example-h2">{{ skill.titulo }}</h2>
-      <mat-progress-spinner class="example-margin" [color]="skill.color" mode="determinate" [value]="skill.value">
-      </mat-progress-spinner>
-      </mat-card-content>
+<div class="container py-5">
+   <mat-card class="">
+      <mat-card-header>
+         <mat-card-title class="text-center">
+            <h2>Skill's y leanguajes</h2>
+         </mat-card-title>
+      </mat-card-header>
+      <div class="row horizontal">
+         <div class="col" *ngFor="let skill of skillsData">
+            <mat-card-content>
+               <h2 class="example-h2">{{ skill.titulo }}</h2>
+               <mat-progress-spinner class="example-margin progress-bar progress-bar-striped" [color]="skill.color" mode="determinate" [value]="skill.value">
+               </mat-progress-spinner>
+            </mat-card-content>
+         </div>
+      </div>
    </mat-card>
 </div>
-
- 
