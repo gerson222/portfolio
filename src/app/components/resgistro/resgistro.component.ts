@@ -48,16 +48,27 @@ export class ResgistroComponent {
   isFieldValid(fieldName: string) {
     const field = this.form.get(fieldName);
     return field?.invalid && field?.touched;
-  }  
+  }
+
+  showPassword: boolean = false;
+  showConfirmPassword: boolean = false;
+
+  togglePasswordVisibility(controlName: string) {
+    if (controlName === 'password') {
+      this.showPassword = !this.showPassword;
+    } else if (controlName === 'confirmPassword') {
+      this.showConfirmPassword = !this.showConfirmPassword;
+    }
+  }
 
   passwordMatchValidator(form: FormGroup) {
     const passwordControl = form.get('password');
     const confirmPasswordControl = form.get('confirmPassword');
-  
+
     if (passwordControl && confirmPasswordControl) {
       const passwordValue = passwordControl.value;
       const confirmPasswordValue = confirmPasswordControl.value;
-  
+
       if (passwordValue !== confirmPasswordValue) {
         confirmPasswordControl.setErrors({ passwordMismatch: true });
       } else {
@@ -65,15 +76,15 @@ export class ResgistroComponent {
       }
     }
   }
-  
+
   emailMatchValidator(form: FormGroup) {
     const emailControl = form.get('email');
     const confirmEmailControl = form.get('confirmEmail');
-  
+
     if (emailControl && confirmEmailControl) {
       const emailValue = emailControl.value;
       const confirmEmailValue = confirmEmailControl.value;
-  
+
       if (emailValue !== confirmEmailValue) {
         confirmEmailControl.setErrors({ emailMismatch: true });
       } else {
@@ -81,8 +92,6 @@ export class ResgistroComponent {
       }
     }
   }
-  
-  
 
   onEnviar(event: Event) {
     event.preventDefault();
