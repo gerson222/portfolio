@@ -2,27 +2,32 @@
    <div class="form">
      <form class="register-form" [formGroup]="form" (ngSubmit)="onEnviar($event)">
        <input type="email" formControlName="email" placeholder="email address" required>
-       <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="error">
-         <ng-container *ngIf="form.get('email')?.hasError('required')">Email is required.</ng-container>
-         <ng-container *ngIf="form.get('email')?.hasError('email')">Email format is invalid.</ng-container>
+       <div *ngIf="email?.invalid && email?.touched" class="error">
+         <ng-container *ngIf="email?.hasError('required')">Email is required.</ng-container>
+         <ng-container *ngIf="email?.hasError('email') && !email?.hasError('required')">Email format is invalid.</ng-container>
        </div>
+       <div *ngIf="email?.valid && email?.touched" class="valid-msg">Email is valid.</div>
        <input type="email" formControlName="confirmEmail" placeholder="confirm email address" required>
-       <div *ngIf="form.get('confirmEmail')?.invalid && form.get('confirmEmail')?.touched" class="error">
-         <ng-container *ngIf="form.get('confirmEmail')?.hasError('required')">Confirm Email is required.</ng-container>
+       <div *ngIf="confirmEmail?.invalid && confirmEmail?.touched" class="error">
+         <ng-container *ngIf="confirmEmail?.hasError('required')">Confirm Email is required.</ng-container>
          <ng-container *ngIf="form.hasError('emailMismatch')">Emails do not match.</ng-container>
        </div>
+       <div *ngIf="confirmEmail?.valid && confirmEmail?.touched" class="valid-msg">Confirm Email is valid.</div>
        <input type="password" formControlName="password" placeholder="password" required>
-       <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="error">
-         <ng-container *ngIf="form.get('password')?.hasError('required')">Password is required.</ng-container>
-         <ng-container *ngIf="form.get('password')?.hasError('pattern')">Password format is invalid.</ng-container>
+       <div *ngIf="password?.invalid && password?.touched" class="error">
+         <ng-container *ngIf="password?.hasError('required')">Password is required.</ng-container>
+         <ng-container *ngIf="password?.hasError('pattern') && !password?.hasError('required')">Password format is invalid.</ng-container>
        </div>
+       <div *ngIf="password?.valid && password?.touched" class="valid-msg">Password is valid.</div>
        <input type="password" formControlName="confirmPassword" placeholder="confirm password" required>
-       <div *ngIf="form.get('confirmPassword')?.invalid && form.get('confirmPassword')?.touched" class="error">
-         <ng-container *ngIf="form.get('confirmPassword')?.hasError('required')">Confirm Password is required.</ng-container>
+       <div *ngIf="confirmPassword?.invalid && confirmPassword?.touched" class="error">
+         <ng-container *ngIf="confirmPassword?.hasError('required')">Confirm Password is required.</ng-container>
          <ng-container *ngIf="form.hasError('passwordMismatch')">Passwords do not match.</ng-container>
        </div>
-       <button type="submit">create</button>
+       <div *ngIf="confirmPassword?.valid && confirmPassword?.touched" class="valid-msg">Confirm Password is valid.</div>
+       <button type="submit" [disabled]="!form.valid">create</button>
        <p class="message">Already registered? <a href="login.html">Sign In</a></p>
      </form>
    </div>
  </div>
+ 

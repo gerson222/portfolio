@@ -112,3 +112,16 @@ button:focus {
   -o-background-size: cover;
   -msn-background-size: cover;
 }
+
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.valid-msg {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
