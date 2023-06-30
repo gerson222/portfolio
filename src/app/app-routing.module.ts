@@ -4,11 +4,13 @@ import { IndexComponent } from './components/index/index.component';
 import { Page404Component } from './components/page404/page404.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ResgistroComponent } from './components/resgistro/resgistro.component';
 
 const routes: Routes = [
   {path:'', component: IndexComponent},
   {path:'profile', component: ProfileComponent},
   {path:'login', component: LoginComponent},
+  {path:'registro', component: ResgistroComponent},
   {path:'**', component: Page404Component},
 ];
 
