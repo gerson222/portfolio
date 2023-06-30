@@ -61,11 +61,7 @@ export class ResgistroComponent {
       if (passwordValue !== confirmPasswordValue) {
         confirmPasswordControl.setErrors({ passwordMismatch: true });
       } else {
-        if (confirmPasswordControl.hasError('passwordMismatch')) {
-          const errors = { ...confirmPasswordControl.errors };
-          delete errors['passwordMismatch'];
-          confirmPasswordControl.setErrors(Object.keys(errors).length !== 0 ? errors : null);
-        }
+        confirmPasswordControl.setErrors(null); // Limpia los errores si coinciden
       }
     }
   }
@@ -81,14 +77,11 @@ export class ResgistroComponent {
       if (emailValue !== confirmEmailValue) {
         confirmEmailControl.setErrors({ emailMismatch: true });
       } else {
-        if (confirmEmailControl.hasError('emailMismatch')) {
-          const errors = { ...confirmEmailControl.errors };
-          delete errors['emailMismatch'];
-          confirmEmailControl.setErrors(Object.keys(errors).length !== 0 ? errors : null);
-        }
+        confirmEmailControl.setErrors(null); // Limpia los errores si coinciden
       }
     }
   }
+  
   
 
   onEnviar(event: Event) {

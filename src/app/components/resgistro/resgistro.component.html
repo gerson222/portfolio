@@ -10,7 +10,7 @@
        <input type="email" formControlName="confirmEmail" placeholder="confirm email address" required>
        <div *ngIf="confirmEmail?.invalid && confirmEmail?.touched" class="error">
          <ng-container *ngIf="confirmEmail?.hasError('required')">Confirm Email is required.</ng-container>
-         <ng-container *ngIf="form.hasError('emailMismatch')">Emails do not match.</ng-container>
+         <ng-container *ngIf="confirmEmail?.hasError('emailMismatch')">Emails do not match.</ng-container>
        </div>
        <div *ngIf="confirmEmail?.valid && confirmEmail?.touched" class="valid-msg">Confirm Email is valid.</div>
        <input type="password" formControlName="password" placeholder="password" required>
@@ -22,7 +22,7 @@
        <input type="password" formControlName="confirmPassword" placeholder="confirm password" required>
        <div *ngIf="confirmPassword?.invalid && confirmPassword?.touched" class="error">
          <ng-container *ngIf="confirmPassword?.hasError('required')">Confirm Password is required.</ng-container>
-         <ng-container *ngIf="form.hasError('passwordMismatch')">Passwords do not match.</ng-container>
+         <ng-container *ngIf="confirmPassword?.hasError('passwordMismatch')">Passwords do not match.</ng-container>
        </div>
        <div *ngIf="confirmPassword?.valid && confirmPassword?.touched" class="valid-msg">Confirm Password is valid.</div>
        <button type="submit" [disabled]="!form.valid">create</button>
