@@ -3,30 +3,26 @@
       <div>
          <label for="email">Email: </label>
          <input type="email" formControlName="email" placeholder="example@mail.com">
-      </div>
-      <div *ngIf="Mail?.errors  && Mail?.touched">
-         <p *ngIf="Mail?.hasError('required')" class="error">
-            El email es requerido.
-         </p>
-         <p *ngIf="Mail?.hasError('email')" class="error">
-            El formato del email debe ser válido.
-         </p>
+         <div *ngIf="email?.invalid && email?.dirty" class="error">
+            <ng-container *ngIf="email?.hasError('required')">El email es requerido.</ng-container>
+            <ng-container *ngIf="email?.hasError('email') && !email?.hasError('required')">El email no es válido.</ng-container>
+         </div>
       </div>
       <div>
          <label for="exampleInputPassword1" class="form-label">Contraseña: </label>
-         <input type="password" formControlName="password" [class.border-danger]="MailValid" placeholder="1A23BC4D">
+         <input type="password" formControlName="password" [class.border-danger]="passwordValid" placeholder="1A23BC4D">
+         <div *ngIf="password?.invalid && password?.dirty && !email?.hasError('email')" class="error">
+            <ng-container *ngIf="password?.hasError('required')">La contraseña es requerida.</ng-container>
+            <ng-container *ngIf="password?.hasError('pattern') && !password?.hasError('required')">La contraseña no es válida.</ng-container>
+         </div>
       </div>
-      <div *ngIf="Password?.errors  && Password?.touched">
-         <p *ngIf="Password?.hasError('required')" class="error">
-            La contrseña es requerida.
-         </p>
-         <p *ngIf="Password?.errors?.['minLength']" class="error">
-            La contraseña debe ser de 8 o más caracteres.
-         </p>
+      <div>
+         <input type="checkbox" formControlName="showPassword">
+         <label for="showPassword">Mostrar contraseña</label>
       </div>
       <div>
          <button type="submit">Iniciar Sesión</button>
-         <p class="message">¿Estas registrado? <a routerLink="/registro">Crea una cuenta</a></p>
+         <p class="message">¿Estás registrado? <a routerLink="/registro">Crea una cuenta</a></p>
       </div>
    </form>
 </div>
