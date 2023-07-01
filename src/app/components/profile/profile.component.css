@@ -1,0 +1,94 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.about-me-container,
+.skills-container,
+.projects-container,
+.experiences-container,
+.educations-container {
+  margin-bottom: 10px;
+}
+
+.about-me-card,
+.skills-card,
+.project-card,
+.experience-card,
+.education-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.about-me-card h4,
+.skills-card h4,
+.project-card h4,
+.experience-card h4,
+.education-card h4 {
+  margin-bottom: 2.5px;
+}
+
+.about-me-card p,
+.skills-card p,
+.project-card p,
+.experience-card p,
+.education-card p {
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #000;
+  background-color: #ccc;
+  padding: 2.5px 5px;
+  border-radius: 4px;
+}
+
+.project-card a:hover {
+  background-color: #aaa;
+}
+
+.bg-image-full {
+  background-image: url(..\..\..\assets\img\fondo2.png);
+}
+
+.educations-container,
+.about-me-container,
+.experiences-container,
+.projects-container,
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.education-card,
+.about-me-card,
+.experience-card,
+.project-card,
+.skill-card {
+  width: 100%;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .horizontal {
+    flex-direction: column;
+  }
+}

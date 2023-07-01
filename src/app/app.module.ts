@@ -1,14 +1,19 @@
+//angular
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//angular material
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//nebular
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
@@ -51,7 +56,7 @@ import { ResgistroComponent } from './components/resgistro/resgistro.component';
     NbThemeModule.forRoot({ name: 'cosmic' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    MatCardModule, MatProgressSpinnerModule, MatButtonModule,
+    MatCardModule, MatProgressSpinnerModule, MatButtonModule, MatGridListModule,
     FormsModule, ReactiveFormsModule,
   ],
   providers: [],

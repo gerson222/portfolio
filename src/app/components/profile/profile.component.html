@@ -1,1 +1,60 @@
-<p>profile works!</p>
+<div class="profile-container bg-image-full">
+  <h3>About Me</h3>
+  <div class="about-me-container" *ngFor="let about of aboutMe">
+    <div class="about-me-card mat-elevation-z2">
+      <h4>{{ about.title }}</h4>
+      <p>{{ about.description }}</p>
+      <span>{{ getFileName(about.imageUrl) }}</span>
+    </div>
+  </div>
+
+  <h3>Educación</h3>
+  <div class="horizontal">
+    <div class="educations-container" *ngFor="let educacion of educaciones">
+      <div class="education-card mat-elevation-z2">
+        <h4>{{ educacion.titulo }}</h4>
+        <p>{{ educacion.inicio }} - {{ educacion.fin }}</p>
+        <p>{{ educacion.institucion }}</p>
+        <p>{{ educacion.contenido }}</p>
+        <span>{{ getFileName(educacion.imagen) }}</span>
+        <p>{{ educacion.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Experiencia</h3>
+  <div class="horizontal">
+    <div class="experiences-container" *ngFor="let experiencia of experiencias">
+      <div class="experience-card mat-elevation-z2">
+        <h4>{{ experiencia.puesto }}</h4>
+        <p>{{ experiencia.empresa }}</p>
+        <p>{{ experiencia.inicio }} - {{ experiencia.fin }}</p>
+        <p>{{ experiencia.descripcion }}</p>
+        <span>{{ getFileName(experiencia.imagen) }}</span>
+      </div>
+    </div>
+  </div>
+
+    <h3>Proyectos</h3>
+    <div class="horizontal">
+      <div class="projects-container" *ngFor="let project of projects">
+        <div class="project-card mat-elevation-z2">
+          <h4>{{ project.title }}</h4>
+          <p>{{ project.content }}</p>
+          <span>{{ getFileName(project.buttonUrl) }}</span>
+        </div>
+      </div>
+    </div>
+
+      <h3>Habilidades</h3>
+      <div class="horizontal">
+        <div class="skills-container" *ngFor="let skill of skills">
+          <div class="skill-card mat-elevation-z2">
+            <h4>{{ skill.titulo }}</h4>
+            <p>{{ skill.color}}</p>
+            <p>{{ skill.value}}</p>
+            <span>{{ getFileName(skill.imagen) }}</span>
+          </div>
+        </div>
+      </div>
+    </div>

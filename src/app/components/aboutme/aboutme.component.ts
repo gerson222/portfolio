@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { AboutMe, aboutMeData } from '../../models/aboutme';
 
 @Component({
@@ -7,5 +7,5 @@ import { AboutMe, aboutMeData } from '../../models/aboutme';
   styleUrls: ['./aboutme.component.css']
 })
 export class AboutMeComponent {
-  @Input() aboutMeData: AboutMe[] = aboutMeData;
+  aboutMeData: AboutMe[] = aboutMeData;
 }

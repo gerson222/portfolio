@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Educacion, educaciones } from '../../models/educacion';
 
 @Component({
@@ -7,5 +7,5 @@ import { Educacion, educaciones } from '../../models/educacion';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent {
-  @Input() educaciones: Educacion[] = educaciones;
+  educaciones: Educacion[] = educaciones;
 }

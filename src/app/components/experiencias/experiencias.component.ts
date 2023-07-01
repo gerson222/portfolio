@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Experiencia, experiencias } from 'src/app/models/experiencia';
 
 @Component({
@@ -8,6 +8,6 @@ import { Experiencia, experiencias } from 'src/app/models/experiencia';
 })
 export class ExperienciasComponent {
 
-  @Input() experiencias: Experiencia[] = experiencias;
+  experiencias: Experiencia[] = experiencias;
 
 }
