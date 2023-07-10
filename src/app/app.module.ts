@@ -10,6 +10,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button'
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -31,6 +36,7 @@ import { AboutMeComponent } from './components/aboutme/aboutme.component';
 import { ProyectComponent } from './components/proyect/proyect.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ResgistroComponent } from './components/resgistro/resgistro.component';
+import { ButtonUpComponent } from './components/button-up/button-up.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +52,8 @@ import { ResgistroComponent } from './components/resgistro/resgistro.component';
     AboutMeComponent,
     ProyectComponent,
     SkillsComponent,
-    ResgistroComponent
+    ResgistroComponent,
+    ButtonUpComponent
   ],
   imports: [
     BrowserModule,
@@ -56,8 +63,9 @@ import { ResgistroComponent } from './components/resgistro/resgistro.component';
     NbThemeModule.forRoot({ name: 'cosmic' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    MatCardModule, MatProgressSpinnerModule, MatButtonModule, MatGridListModule,
-    FormsModule, ReactiveFormsModule,
+    MatCardModule, MatProgressSpinnerModule, MatButtonModule, 
+    MatGridListModule, MatInputModule, MatFormFieldModule,
+    FormsModule, ReactiveFormsModule, MatTabsModule,MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,24 @@
 <app-about-me></app-about-me>
-<div class="bg-image-full">
-   <app-proyect></app-proyect>
-   <app-experiencias></app-experiencias>
-   <app-educacion></app-educacion>
-   <app-skills></app-skills>
-</div>
+<mat-tab-group class="bg-image-full">
+   <mat-tab label="Proyectos">
+      <ng-template matTabContent>
+         <app-proyect></app-proyect>
+      </ng-template>
+   </mat-tab>
+   <mat-tab label="Experiencia">
+      <ng-template matTabContent>
+         <app-experiencias></app-experiencias>
+      </ng-template>
+   </mat-tab>
+   <mat-tab label="Educación">
+      <ng-template matTabContent>
+         <app-educacion></app-educacion>
+      </ng-template>
+   </mat-tab>
+   <mat-tab label="Habilidades">
+      <ng-template matTabContent>
+         <app-skills></app-skills>
+      </ng-template>
+   </mat-tab>
+</mat-tab-group>
+<app-button-up></app-button-up>
